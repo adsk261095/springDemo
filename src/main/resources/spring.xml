@@ -3,7 +3,6 @@
 
 <beans>
 
-    <bean id="triangle" class="com.github.aman.Triangle">
-        <constructor-arg value="equilateral"/>
-    </bean>
+    <bean id="triangle" class="com.github.aman.Triangle"/>
+
 </beans>
