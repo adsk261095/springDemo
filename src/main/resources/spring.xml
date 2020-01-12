@@ -4,7 +4,14 @@
 <beans>
 
 
-    <bean id="triangle" class="com.github.aman.Triangle" autowire="byName">
+    <bean id="triangle" class="com.github.aman.Triangle">
+        <property name="points">
+            <list>
+                <ref bean="p1"/>
+                <ref bean="p2"/>
+                <ref bean="p3"/>
+            </list>
+        </property>
     </bean>
 
     <bean id="p1" class="com.github.aman.Point">
