@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
-<beans>
+<beans default-init-method="myInit" default-destroy-method="cleanUp">
 
 
     <bean id="triangle" class="com.github.aman.Triangle">
@@ -15,8 +15,8 @@
     </bean>
 
     <bean id="p1" class="com.github.aman.Point">
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
+        <property name="x" value="${point1.pointX}"/>
+        <property name="y" value="${point1.pointY}"/>
     </bean>
 
     <bean id="p2" class="com.github.aman.Point">
@@ -27,6 +27,10 @@
     <bean id="p3" class="com.github.aman.Point">
         <property name="x" value="-20"/>
         <property name="y" value="0"/>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="pointsConfig.properties"/>
     </bean>
 
 </beans>

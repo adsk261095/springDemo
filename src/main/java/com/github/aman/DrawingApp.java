@@ -22,11 +22,13 @@ public class DrawingApp {
          * in resorces in case of maven project
          */
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+//        context.registerShutdownHook();
         Triangle triangle = (Triangle) context.getBean("triangle");
 
         /**
          * using object injection
          */
         triangle.draw();
+
     }
 }
