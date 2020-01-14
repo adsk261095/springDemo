@@ -22,12 +22,11 @@ public class DrawingApp {
          * in resorces in case of maven project
          */
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Triangle triangle = (Triangle) context.getBean("triangle");
+        shape shape = (shape) context.getBean("circle");
 
         /**
          * using object injection
          */
-        triangle.draw();
-        System.out.print("in detached head state");
+        shape.draw();
     }
 }

@@ -1,6 +1,6 @@
 package com.github.aman;
 
-public class Triangle {
+public class Triangle implements shape{
     private Point p1;
     private Point p2;
     private Point p3;
