@@ -10,6 +10,8 @@
 
 <!--    takes care of define all the beans postprocessors-->
     <context:annotation-config/>
+<!--    spirng need to scan for beans in all classes in the base package-->
+    <context:component-scan base-package="com.github.aman"/>
 
     <bean id="triangle" class="com.github.aman.Triangle">
 <!--        <property name="p1" ref="point1"/>-->
@@ -17,9 +19,11 @@
 <!--        <property name="p3" ref="point3"/>-->
     </bean>
 
-    <bean id="circle" class="com.github.aman.circle">
-<!--        <property name="center" ref="point1"/>-->
-    </bean>
+<!--        using @component in class-->
+<!--    <bean id="circle" class="com.github.aman.circle">-->
+<!--&lt;!&ndash;        <property name="center" ref="point1"/>&ndash;&gt;-->
+<!--    </bean>-->
+
     <bean id="point1" class="com.github.aman.Point">
 <!--        <qualifier type="CircleRelated"/>-->
         <property name="x" value="0"/>
