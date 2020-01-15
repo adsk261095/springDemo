@@ -13,9 +13,9 @@ public class circle implements shape {
 
     @Autowired
     /**
-     * Autowired annotation works like autowiring by type
-     * therefore we need single beans of that particular type in
-     * spring.xml
+     * Autowired annotation works like:
+     * first look for autowiring by type
+     * if multiple beans of same type then do autowiring by name
      */
     public void setCenter(Point center) {
         //will throw error at the time when beans are being initialized
